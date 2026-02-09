@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get 2% Cashback on Your ISA | Freetrade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-pink: #ff97d6;
+            --brand-purple: #8658D7;
+            --brand-dark: #000000;
+            --brand-light: #FFFFFF;
+            --text-primary: #1A0B2E;
+            --text-secondary: #5A4866;
+            --gradient-bg: linear-gradient(135deg, #1A0B2E 0%, #3D1F5C 100%);
+            --accent-gradient: linear-gradient(135deg, #FF2E82 0%, #A855F7 100%);
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            --spacing-2xl: 6rem;
+            --ft-pink: #ff97d6;
+            --ft-purple: #8658D7;
+            --ft-gradient: linear-gradient(90deg, #ff97d6 0%, #8658D7 100%);
+            --font-main: 'DM Sans', sans-serif;
+            --font-mono: 'Space Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Announcement Bar */
+        .announcement-bar {
+            background: linear-gradient(90deg, #FF3366 0%, #A855F7 100%);
+            color: #fff;
+            font-size: 0.875rem;
+            padding: 0.75rem 1rem;
+        }
+
+        .announcement-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .announcement-content p {
+            margin: 0;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        .announcement-content strong {
+            font-weight: 700;
+        }
+
+        .announcement-separator {
+            margin: 0 0.4rem;
+            opacity: 0.9;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #000;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Container */
+        .nav-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 32px;
+            width: auto;
+            display: block;
+        }
+
+        /* Hamburger */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        /* Links */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links li {
+            font-size: 13px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        } 
+
+        /* Actions */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            border: 1px solid #333;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            padding: 4px 4px 4px 12px;
+            margin-right: 25px;
+        }
+
+        .search-bar input {
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            width: 120px;
+        }
+
+        .go-btn {
+            background-color: #2c2c2c;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .log-in {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 13px;
+        }
+
+        .get-started {
+            background-color: #7B61FF;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        /* ------------------ */
+        /* MOBILE STYLES */
+        /* ------------------ */
+        @media (max-width: 1024px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links,
+            .nav-actions {
+                display: none;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                background: black;
+                flex-direction: column;
+                padding: 20px 40px;
+            }
+
+            .nav-links.open {
+                top: 80px;
+                display: flex;
+                gap: 20px;
+            }
+
+            .nav-actions.open {
+                top: 260px;
+                display: flex;
+                gap: 20px;
+                border-top: 1px solid #222;
+            }
+
+            .search-bar {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+
+        /* Promo Banner */
+        .promo-banner {
+            background: linear-gradient(90deg, #e94e77 0%, #d45191 25%, #a862d2 75%, #9266f0 100%);
+            width: 100%;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .banner-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+        }
+
+        .banner-content p {
+            margin: 0;
+        }
+
+        .banner-content strong {
+            font-weight: 700;
+        }
+
+        .clock-icon {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('gradient_hero.webp');
+            background-size: cover;
+            background-position: center;
+            padding: 160px 20px 100px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        /* Typography Overhaul */
+        .hero-content h1 {
+            font-family: var(--font-main);
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: -3px;
+            margin-bottom: 24px;
+        }
+
+        .hero-content .highlight {
+            background: var(--ft-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            max-width: 500px;
+            margin-bottom: 40px;
+        }
+
+        /* Freetrade Pill Buttons */
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            border-radius: 100px;
+            padding: 16px 32px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--ft-gradient);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Visual Mockup Card Styles */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            z-index: 1;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            animation: floatImage 6s ease-in-out infinite;
+            filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+        }
+
+        .image-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle, rgba(255, 51, 102, 0.2) 0%, transparent 70%);
+            z-index: -1;
+            filter: blur(40px);
+        }
+
+        @keyframes floatImage {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('gradient_section-alt.avif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+        }
+
+        .section-title {
+            text-align: center;
+            color: white;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: var(--spacing-xl);
+            letter-spacing: -0.02em;
+        }
+
+        .section-title .highlight {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .benefits-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .benefit-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .benefit-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 280px;
+        }
+
+        /* White Pill Button from image */
+        .benefit-btn {
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: opacity 0.2s ease;
+        }
+
+        .benefit-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Calculator Section */
+        .calculator-section {
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('gradient_section-alt.avif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        /* Glass Container for Calculator */
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 60px;
+        }
+
+        /* Glass Container for Timeline */
+        .timeline-section {
+            max-width: 900px;
+            margin: 40px auto 0;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+        }
+
+        .calculator-title {
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .calculator-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .calculator-input-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .input-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.95rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .currency-symbol {
+            position: absolute;
+            left: 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--brand-pink);
+        }
+
+        .calculator-input {
+            width: 100%;
+            padding: 1.25rem 1.25rem 1.25rem 3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .calculator-input:focus {
+            outline: none;
+            border-color: var(--brand-pink);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+            margin-top: var(--spacing-md);
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--brand-pink);
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(255, 46, 130, 0.5);
+        }
+
+        .slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--brand-pink);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 10px rgba(255, 46, 130, 0.5);
+        }
+
+        .calculator-result {
+            background: linear-gradient(135deg, rgba(255, 46, 130, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+            border-radius: 20px;
+            padding: var(--spacing-lg);
+            text-align: center;
+            border: 2px solid rgba(255, 46, 130, 0.3);
+        }
+
+        /* Freetrade 2026 Typography Tweaks */
+        .calculator-title, .timeline-header h3 {
+            font-family: var(--font-main);
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .input-label, .timeline-label {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ft-pink);
+        }
+
+        /* Calculator Result Area */
+        .calculator-result {
+            background: rgba(255, 51, 102, 0.1);
+            border: 1px solid rgba(255, 51, 102, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .result-value {
+            font-family: var(--font-mono);
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: -4px;
+            background: linear-gradient(90deg, #FF3366 0%, #A855F7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Offer Terms Box - Glassy list */
+        .offer-terms {
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+            padding-top: 30px;
+            border-radius: 0 0 24px 24px;
+        }
+
+        .timeline-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-header h3 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+        }
+
+        .timeline-container {
+            position: relative;
+            padding: var(--spacing-lg) 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, 
+                var(--brand-pink) 0%, 
+                var(--brand-pink) 50%, 
+                rgba(255, 255, 255, 0.2) 50%, 
+                rgba(255, 255, 255, 0.2) 100%);
+            transform: translateY(-50%);
+            border-radius: 10px;
+        }
+
+        .timeline-items {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .timeline-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--brand-pink);
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: var(--spacing-md);
+            box-shadow: 0 0 0 8px rgba(255, 46, 130, 0.2);
+            z-index: 2;
+            position: relative;
+        }
+
+        .timeline-item.future .timeline-dot {
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-date {
+            font-weight: 800;
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-xs);
+            color: white;
+        }
+
+        .timeline-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .timeline-description {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 200px;
+        }
+
+        /* Offer Terms Box */
+        .offer-terms {
+            background: linear-gradient(135deg, rgba(255, 46, 130, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border: 2px solid rgba(255, 46, 130, 0.3);
+            border-radius: 20px;
+            padding: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .offer-terms h4 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .terms-grid {
+            display: grid;
+            gap: var(--spacing-md);
+        }
+
+        .term-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+        }
+
+        .term-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .term-content {
+            flex: 1;
+        }
+
+        .term-title {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            color: white;
+        }
+
+        .term-description {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+        }
+
+        /* Social Proof Section */
+        .social-proof {
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('gradient_section-alt.avif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+        }
+
+        .social-proof .section-header {
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .social-proof .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .social-proof .section-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Stats Glass Row */
+        .stats-glass-row {
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .stat-glass-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-glass-box:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+            border-color: rgba(255, 151, 214, 0.3);
+        }
+
+        .stat-number {
+            font-family: var(--font-mono);
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #FF3366 0%, #A855F7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .stat-tag {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Testimonials Grid */
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: left;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-8px);
+            border-color: rgba(255, 151, 214, 0.3);
+        }
+
+        .testimonial-card::before {
+            content: '❝';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.1;
+            color: var(--brand-pink);
+        }
+
+        .testimonial-rating {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            color: #FFD700;
+        }
+
+        .rating-date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 1px;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #FF2E82 0%, #A855F7 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .author-role {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Awards Section */
+        .awards-section {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 60px 40px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+        }
+
+        .awards-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #FF3366 0%, #A855F7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .awards-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .award-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .award-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+            border-color: rgba(255, 151, 214, 0.3);
+        }
+
+        .award-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(255, 46, 130, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 2px solid rgba(255, 151, 214, 0.2);
+        }
+
+        .badge-placeholder {
+            font-family: var(--font-mono);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .award-info {
+            flex: 1;
+        }
+
+        .award-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .award-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .stats-glass-row {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .awards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .stat-glass-box {
+                padding: 30px 15px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .awards-section {
+                padding: 40px 25px;
+            }
+            
+            .award-card {
+                padding: 25px;
+            }
+            
+            .award-icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-glass-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-card {
+                padding: 30px 25px;
+            }
+            
+            .award-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+        }
+        /* CTA Section */
+        .cta-section {
+            padding: var(--spacing-2xl) var(--spacing-md);
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('gradient_section-alt.avif');
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: var(--spacing-md);
+            letter-spacing: -0.02em;
+        }
+
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .cta-steps {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        .step-item {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            align-items: flex-start;
+        }
+
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            background: var(--accent-gradient);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('gradient_section-alt.avif');
+            color: white;
+            padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 800px;
+            margin: var(--spacing-lg) auto 0;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .image-wrapper {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .hero-container {
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                margin-top: var(--spacing-lg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --spacing-xl: 3rem;
+                --spacing-2xl: 4rem;
+            }
+
+            .announcement-bar {
+                font-size: 0.8rem;
+            }
+
+            .banner-content {
+                font-size: 12px;
+                padding: 0 20px;
+                text-align: center;
+            }
+
+            .benefits-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                flex-direction: column;
+            }
+
+            .result-value {
+                font-size: 2.5rem;
+            }
+
+            .calculator-container {
+                padding: var(--spacing-lg);
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .timeline-items {
+                flex-direction: column;
+                gap: var(--spacing-xl);
+            }
+
+            .timeline-line {
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                width: 4px;
+                height: auto;
+                background: linear-gradient(180deg, 
+                    var(--brand-pink) 0%, 
+                    var(--brand-pink) 33%, 
+                    rgba(255, 255, 255, 0.2) 33%, 
+                    rgba(255, 255, 255, 0.2) 100%);
+                transform: translateX(-50%);
+            }
+
+            .timeline-item {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                margin-bottom: 0;
+                margin-right: var(--spacing-md);
+                flex-shrink: 0;
+            }
+
+            .timeline-description {
+                max-width: none;
+            }
+
+            .timeline-section {
+                padding: var(--spacing-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="Freetrade_Horizontal_White.svg" alt="Freetrade logo" class="logo-img">
+            </div>
+    
+            <!-- Hamburger (mobile only) -->
+            <button class="menu-toggle" aria-label="Open menu">☰</button>
+    
+            <!-- Links -->
+            <ul class="nav-links">
+                <li>PLANS & ACCOUNTS <span class="arrow"></span></li>
+                <li>INVESTMENTS <span class="arrow"></span></li>
+                <li>RESOURCES <span class="arrow"></span></li>
+                <li>SUPPORT</li>
+            </ul>
+    
+            <!-- Actions -->
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search">
+                    <button class="go-btn">GO</button>
+                </div>
+                <a href="#" class="log-in">LOG IN</a>
+                <a href="#" class="get-started">GET STARTED</a>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navActions = document.querySelector('.nav-actions');
+    
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            navActions.classList.toggle('open');
+        });
+    </script>    
+
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        <div class="banner-content">
+            <span class="clock-icon">🕒</span>
+            <p><strong>Limited Time Offer:</strong> Get 2% cashback on ISA top-ups of £1,000+ • Ends 15 June 2026</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Get <span class="highlight">2% cashback</span> when you top up your ISA</h1>
+                <p>Top up £1,000 or more and earn up to £5,000 cashback. Tax-free investing made even more rewarding.</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary">Open or fund your ISA</a>
+                    <a href="#calculator" class="btn btn-secondary">Calculate cashback</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="image-wrapper">
+                    <img src="Funds_mobile-and-web.avif" alt="Freetrade App" class="hero-image">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2 class="section-title">Why choose Freetrade's <span class="highlight">Stocks & Shares ISA?</span></h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">💰</div>
+                <h3 class="benefit-title">2% cashback reward</h3>
+                <p class="benefit-description">Deposit £1,000 or more and receive 2% cashback on your top-ups, capped at £5,000. More value for your investment.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h3 class="benefit-title">Tax-free growth</h3>
+                <p class="benefit-description">Grow your money without paying UK tax. No capital gains or dividend tax. Keep more of what you earn.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📱</div>
+                <h3 class="benefit-title">Simple, mobile-first investing</h3>
+                <p class="benefit-description">Invest in minutes from our app. Buy, sell, and track your investments with ease. No complicated paperwork.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <h2 class="section-title" style="color: white;">See how much cashback you could <span class="highlight">earn</span></h2>
+        <div class="calculator-container">
+            <h3 class="calculator-title">Cashback Calculator</h3>
+            <p class="calculator-subtitle">Learn more at what initializes you to caby bidd SA to get account.</p>
+            
+            <div class="calculator-input-group">
+                <label class="input-label">How much are you topping up?</label>
+                <div class="input-wrapper">
+                    <span class="currency-symbol">£</span>
+                    <input type="number" class="calculator-input" id="topupAmount" value="2000" min="1000" max="250000" step="100">
+                </div>
+                <input type="range" class="slider" id="topupSlider" min="1000" max="250000" value="2000" step="100">
+            </div>
+
+            <div class="calculator-result">
+                <div class="result-label">Your cashback</div>
+                <div class="result-value" id="cashbackResult">£40</div>
+            </div>
+
+            <p class="calculator-disclaimer">2% cashback · capped at £5,000 · paid 15 July 2026</p>
+
+            <div style="margin-top: var(--spacing-lg); text-align: center;">
+                <a href="#" class="btn btn-primary">Open or fund your ISA</a>
+            </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="timeline-section">
+            <div class="timeline-header">
+                <h3>How it works</h3>
+                <p>Your journey to earning cashback on your ISA investment</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-items">
+                    <div class="timeline-item">
+                        <div class="timeline-dot">1</div>
+                        <div>
+                            <div class="timeline-icon">🚀</div>
+                            <div class="timeline-date">Today</div>
+                            <div class="timeline-label">Open or fund your ISA</div>
+                            <div class="timeline-description">Start your investment journey with Freetrade</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot">2</div>
+                        <div>
+                            <div class="timeline-icon">💰</div>
+                            <div class="timeline-date">By 15 June 2026</div>
+                            <div class="timeline-label">Top up £1,000+</div>
+                            <div class="timeline-description">Deposit at least £1,000 to qualify for 2% cashback</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item future">
+                        <div class="timeline-dot">3</div>
+                        <div>
+                            <div class="timeline-icon">🎉</div>
+                            <div class="timeline-date">15 July 2026</div>
+                            <div class="timeline-label">Get your cashback</div>
+                            <div class="timeline-description">Receive up to £5,000 cashback directly to your account</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer-terms">
+                <h4>
+                    <span>📋</span>
+                    Offer terms at a glance
+                </h4>
+                <div class="terms-grid">
+                    <div class="term-item">
+                        <div class="term-icon">✓</div>
+                        <div class="term-content">
+                            <div class="term-title">2% cashback on qualifying top-ups</div>
+                            <div class="term-description">Earn 2% cashback when you top up your Stocks & Shares ISA with £1,000 or more. Maximum cashback capped at £5,000.</div>
+                        </div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-icon">📅</div>
+                        <div class="term-content">
+                            <div class="term-title">Top up by 15 June 2026 to qualify</div>
+                            <div class="term-description">All qualifying top-ups must be completed by 15 June 2026. Deposits made after this date will not be eligible for cashback.</div>
+                        </div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-icon">💳</div>
+                        <div class="term-content">
+                            <div class="term-title">Cashback paid on 15 July 2026</div>
+                            <div class="term-description">Your cashback will be automatically credited to your Freetrade account on 15 July 2026. No action needed.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="section-header">
+            <h2 class="section-title">Trusted by <span class="highlight">1.5 million investors</span></h2>
+            <p class="section-subtitle">Join thousands building their financial future with Freetrade.</p>
+        </div>
+
+        <!-- Stats Glass Row -->
+        <div class="stats-glass-row">
+            <div class="stat-glass-box">
+                <div class="stat-number">1.5M+</div>
+                <div class="stat-tag">Active Investors</div>
+            </div>
+            <div class="stat-glass-box">
+                <div class="stat-number">£25B+</div>
+                <div class="stat-tag">Assets Managed</div>
+            </div>
+            <div class="stat-glass-box">
+                <div class="stat-number">98%</div>
+                <div class="stat-tag">Satisfaction Rate</div>
+            </div>
+            <div class="stat-glass-box">
+                <div class="stat-number">FCA</div>
+                <div class="stat-tag">Fully Regulated</div>
+            </div>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    ★★★★★
+                    <span class="rating-date">12 Jan 2026</span>
+                </div>
+                <p class="testimonial-text">"Transferring my ISA to Freetrade was the best financial decision I made. The cashback offer and tax-free growth have been game-changers."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SC</div>
+                    <div class="author-info">
+                        <div class="author-name">Sarah Chen</div>
+                        <div class="author-role">ISA Investor</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    ★★★★★
+                    <span class="rating-date">5 Feb 2026</span>
+                </div>
+                <p class="testimonial-text">"As a first-time investor, Freetrade made everything simple. The FSCS protection gave me confidence to start my investment journey."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MJ</div>
+                    <div class="author-info">
+                        <div class="author-name">Marcus Johnson</div>
+                        <div class="author-role">Verified Investor</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    ★★★★★
+                    <span class="rating-date">28 Jan 2026</span>
+                </div>
+                <p class="testimonial-text">"The transparency and ease of use are outstanding. Knowing my investments are FCA regulated makes all the difference."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">PT</div>
+                    <div class="author-info">
+                        <div class="author-name">Priya T.</div>
+                        <div class="author-role">Portfolio Manager</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust & Award Badges -->
+        <div class="awards-section">
+            <h3 class="awards-title">Recognised & Regulated</h3>
+            <p class="awards-subtitle">Our commitment to security and excellence</p>
+            
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <!-- Replace with your FCA badge image -->
+                        <div class="badge-placeholder">FCA</div>
+                    </div>
+                    <div class="award-info">
+                        <div class="award-name">FCA Regulated</div>
+                        <div class="award-desc">Authorised by Financial Conduct Authority</div>
+                    </div>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <!-- Replace with your FSCS badge image -->
+                        <div class="badge-placeholder">FSCS</div>
+                    </div>
+                    <div class="award-info">
+                        <div class="award-name">FSCS Protected</div>
+                        <div class="award-desc">Up to £85,000 protection per person</div>
+                    </div>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <!-- Replace with your London Stock Exchange badge image -->
+                        <div class="badge-placeholder">LSE</div>
+                    </div>
+                    <div class="award-info">
+                        <div class="award-name">LSE Member</div>
+                        <div class="award-desc">Member of London Stock Exchange</div>
+                    </div>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <!-- Replace with your "Best Investment App" award image -->
+                        <div class="badge-placeholder">🏆</div>
+                    </div>
+                    <div class="award-info">
+                        <div class="award-name">Best Investment App</div>
+                        <div class="award-desc">2025 UK Fintech Awards</div>
+                    </div>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <!-- Replace with your "Most Innovative" award image -->
+                        <div class="badge-placeholder">💡</div>
+                    </div>
+                    <div class="award-info">
+                        <div class="award-name">Most Innovative</div>
+                        <div class="award-desc">2024 WealthTech Awards</div>
+                    </div>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <!-- Replace with your "Top Rated" award image -->
+                        <div class="badge-placeholder">⭐</div>
+                    </div>
+                    <div class="award-info">
+                        <div class="award-name">Top Rated Platform</div>
+                        <div class="award-desc">Trustpilot Excellent</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to earn cashback on your ISA?</h2>
+            <p class="cta-subtitle">Smart terms an effect you to clerk cashback them.</p>
+
+            <div class="cta-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Open or fund your ISA</h4>
+                        <p>Create your account or log in to add funds to your existing ISA.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Top up £1,000 or more by 15 June 2026</h4>
+                        <p>Deposit your funds before the deadline to qualify for the cashback offer.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Get 2% cashback paid on 15 July 2026</h4>
+                        <p>Receive your cashback directly to your account. Up to £5,000 maximum.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-primary" style="font-size: 1.125rem; padding: 1.25rem 2.5rem;">Open or fund your ISA</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🚀 Freetrade</div>
+            
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span>✓</span>
+                    <span>FCA Regulated</span>
+                </div>
+                <div class="trust-badge">
+                    <span>✓</span>
+                    <span>FSCS Protected</span>
+                </div>
+                <div class="trust-badge">
+                    <span>✓</span>
+                    <span>1.5M+ Investors</span>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p><strong>Offer disclaimer:</strong> This offer is for illustrative purposes only. Terms, eligibility criteria, and cashback limits may apply. Capital at risk. The value of investments can go down as well as up. Tax treatment depends on individual circumstances and may be subject to change. Freetrade is a trading name of Freetrade Limited, which is a member of the London Stock Exchange and is authorised and regulated by the Financial Conduct Authority. Registered in England and Wales (no. 09797821).</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Calculator functionality
+        const topupAmount = document.getElementById('topupAmount');
+        const topupSlider = document.getElementById('topupSlider');
+        const cashbackResult = document.getElementById('cashbackResult');
+
+        function calculateCashback(amount) {
+            const cashback = Math.min(amount * 0.02, 5000);
+            return cashback;
+        }
+
+        function updateCashback() {
+            const amount = parseFloat(topupAmount.value);
+            if (amount >= 1000) {
+                const cashback = calculateCashback(amount);
+                cashbackResult.textContent = `£${cashback.toLocaleString('en-GB', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+            } else {
+                cashbackResult.textContent = '£0';
+            }
+        }
+
+        topupAmount.addEventListener('input', function() {
+            topupSlider.value = this.value;
+            updateCashback();
+        });
+
+        topupSlider.addEventListener('input', function() {
+            topupAmount.value = this.value;
+            updateCashback();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
